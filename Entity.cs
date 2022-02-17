@@ -9,8 +9,6 @@
         protected int _armor = 0;
         protected int _damage = 0;
 
-        protected int _healValue = 10;
-        protected int _spellPower = 0;
 
         public int Damage
         {

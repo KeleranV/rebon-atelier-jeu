@@ -7,6 +7,7 @@
         private int _expThreshold = 100;
 
         private int _healValue = 10;
+        private int _spellPower = 0;
 
         public int Exp { get { return _exp; } set { _exp = value; } }
         public int Lvl { get { return _lvl; } }
