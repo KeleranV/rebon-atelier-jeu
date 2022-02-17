@@ -13,22 +13,23 @@
             Console.WriteLine(player.MaxHealth);
             Console.WriteLine(player.Damage);
 
-            Monster monster = new Monster("blob", 100, 5, player, 20);
+            Monster monster = Monster.GenerateMonster(Monster.RandomizeMonsterName(), Monster.RandomizeMonsterMaxHealth(), Monster.RandomizeMonsterDamage(), player, Monster.MonsterRewardCalculation(Monster.RandomizeMonsterMaxHealth(), Monster.RandomizeMonsterDamage()));
             //monster.Attack();
 
 
             Duel duel1 = new Duel(player, monster);
-            
-            while(player.Health > 0)
+
+            while (player.Health > 0)
             {
                 duel1.LancerCombat();
                 if (monster.Health == 0)
-                { 
-                    monster = new Monster("blob2", 100, 5, player, 40);
+                {
+                    monster = Monster.GenerateMonster(Monster.RandomizeMonsterName(), Monster.RandomizeMonsterMaxHealth(), Monster.RandomizeMonsterDamage(), player, Monster.MonsterRewardCalculation(Monster.RandomizeMonsterMaxHealth(), Monster.RandomizeMonsterDamage()));
                     duel1 = new Duel(player, monster);
                 }
             }
             Console.WriteLine("Game Over");
+
         }
     }
 }
