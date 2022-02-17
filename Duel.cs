@@ -69,10 +69,14 @@
                 TourMonster();
             }
 
-            if(_player.Health <= 0)
+            if (_player.Health <= 0)
                 Console.WriteLine("Défaite, le monstre a gagné !");
             else
-                Console.WriteLine("Victoire !");
+            {
+                Console.WriteLine($"Victoire ! Vous remportez {_monster.Reward} exp !");
+                _player.Exp =+ _monster.Reward;
+                _player.TestLvlUp();
+            }
         }
 
         private void TourPlayer()

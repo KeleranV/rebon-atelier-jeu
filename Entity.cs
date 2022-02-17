@@ -2,12 +2,12 @@
 {
     public abstract class Entity
     {
-        private int _maxHealth;
+        protected int _maxHealth;
         private int _health;
         private Entity _enemy;
         private string _name;
-        private int _armor = 0;
-        private int _damage = 0;
+        protected int _armor = 0;
+        protected int _damage = 0;
 
         public int Damage
         {

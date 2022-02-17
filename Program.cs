@@ -13,7 +13,7 @@
             Console.WriteLine(player.MaxHealth);
             Console.WriteLine(player.Damage);
 
-            Monster monster = new Monster("blob", 100, 5, player);
+            Monster monster = new Monster("blob", 100, 5, player, 20);
             //monster.Attack();
 
 
@@ -24,7 +24,7 @@
                 duel1.LancerCombat();
                 if (monster.Health == 0)
                 { 
-                    monster = new Monster("blob2", 100, 5, player);
+                    monster = new Monster("blob2", 100, 5, player, 40);
                     duel1 = new Duel(player, monster);
                 }
             }

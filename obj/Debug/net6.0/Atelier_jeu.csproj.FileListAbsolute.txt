@@ -37,7 +37,6 @@ C:\Users\leo.vansimay\source\repos\Atelier_jeu_v3\bin\Debug\net6.0\Atelier_jeu.e
 C:\Users\leo.vansimay\source\repos\Atelier_jeu_v3\bin\Debug\net6.0\Atelier_jeu.deps.json
 C:\Users\leo.vansimay\source\repos\Atelier_jeu_v3\bin\Debug\net6.0\Atelier_jeu.runtimeconfig.json
 C:\Users\leo.vansimay\source\repos\Atelier_jeu_v3\bin\Debug\net6.0\Atelier_jeu.dll
-C:\Users\leo.vansimay\source\repos\Atelier_jeu_v3\bin\Debug\net6.0\ref\Atelier_jeu.dll
 C:\Users\leo.vansimay\source\repos\Atelier_jeu_v3\bin\Debug\net6.0\Atelier_jeu.pdb
 C:\Users\leo.vansimay\source\repos\Atelier_jeu_v3\obj\Debug\net6.0\Atelier_jeu.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\leo.vansimay\source\repos\Atelier_jeu_v3\obj\Debug\net6.0\Atelier_jeu.AssemblyInfoInputs.cache
@@ -48,3 +47,4 @@ C:\Users\leo.vansimay\source\repos\Atelier_jeu_v3\obj\Debug\net6.0\ref\Atelier_j
 C:\Users\leo.vansimay\source\repos\Atelier_jeu_v3\obj\Debug\net6.0\Atelier_jeu.pdb
 C:\Users\leo.vansimay\source\repos\Atelier_jeu_v3\obj\Debug\net6.0\Atelier_jeu.genruntimeconfig.cache
 C:\Users\leo.vansimay\source\repos\Atelier_jeu_v3\obj\Debug\net6.0\Atelier_jeu.csproj.AssemblyReference.cache
+C:\Users\leo.vansimay\source\repos\Atelier_jeu_v3\obj\Debug\net6.0\refint\Atelier_jeu.dll

@@ -2,6 +2,32 @@
 {
     public class Player : Entity
     {
+        private int _exp = 0;
+        private int _lvl = 1;
+        private int _expThreshold = 100;
+
+        public int Exp { get { return _exp; } set { _exp = value; } }
+        public int Lvl { get { return _lvl; } }
+
+        //Le joueur monte de niveau tout les 100 points d'experience
+        public void LvlUp()
+        {
+            _lvl += 1;
+            Console.WriteLine($"Vous passez au niveau {_lvl} !");
+            _maxHealth += 10;
+            Health = MaxHealth;
+            _damage += 1;
+            Exp -= _expThreshold;
+        }
+
+        public void TestLvlUp()
+        {
+            while(Exp > _expThreshold)
+            {
+                this.LvlUp();
+            }
+        }
+
         public Player(string name, int maxHealth, int damage) : base(name, maxHealth, damage)
         {
         }
