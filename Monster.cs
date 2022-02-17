@@ -2,9 +2,14 @@
 {
     public class Monster : Entity
     {
-        public Monster(string name, int maxHealth, int damage, Entity enemy) : base(name, maxHealth, damage)
+        private int _reward;
+
+        public int Reward { get { return _reward; } }
+
+        public Monster(string name, int maxHealth, int damage, Entity enemy, int reward) : base(name, maxHealth, damage)
         {
             this.Enemy = enemy;
+            this._reward = reward;
         }
 
         public int ChooseAction()
