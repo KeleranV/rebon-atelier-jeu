@@ -39,5 +39,9 @@
             }
         }
 
+        public override void Heal()
+        {
+            Health += 10;
+        }
     }
 }

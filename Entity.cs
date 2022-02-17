@@ -9,6 +9,9 @@
         protected int _armor = 0;
         protected int _damage = 0;
 
+        protected int _healValue = 10;
+        protected int _spellPower = 0;
+
         public int Damage
         {
             get { return _damage; }
@@ -82,11 +85,7 @@
             _enemy.Health -= 10;
         }
 
-        public void Heal()
-        {
-            Console.WriteLine($"{this.Name} se soigne et récupère 5 PV");
-            Health += 5;
-        }
+        public abstract void Heal();
     }
 }
 
