@@ -15,9 +15,8 @@
             Monster monster = Monster.GenerateMonster(Monster.RandomizeMonsterName(), Monster.RandomizeMonsterMaxHealth(), Monster.RandomizeMonsterDamage(), player, Monster.MonsterRewardCalculation(Monster.RandomizeMonsterMaxHealth(), Monster.RandomizeMonsterDamage()));
             //monster.Attack();
 
-
-<<<<<<< HEAD
-            Duel duel1 = new Duel(player, monster);
+            int vieARegenerer = player.MaxHealth / 4;
+            Duel duel1 = new Duel(player, monster, vieARegenerer);
 
             while (player.Health > 0)
             {
@@ -25,22 +24,10 @@
                 if (monster.Health == 0)
                 {
                     monster = Monster.GenerateMonster(Monster.RandomizeMonsterName(), Monster.RandomizeMonsterMaxHealth(), Monster.RandomizeMonsterDamage(), player, Monster.MonsterRewardCalculation(Monster.RandomizeMonsterMaxHealth(), Monster.RandomizeMonsterDamage()));
-                    duel1 = new Duel(player, monster);
-=======
-            Duel duel1 = new Duel(player, monster, 20);
-            
-            while(player.Health > 0)
-            {
-                duel1.LancerCombat();
-                if (monster.Health == 0)
-                { 
-                    monster = new Monster("blob2", 100, 5, player, 40);
-                    duel1 = new Duel(player, monster, 50);
->>>>>>> main
+                    duel1 = new Duel(player, monster, vieARegenerer);
                 }
             }
             Console.WriteLine("Game Over");
-
         }
     }
 }
