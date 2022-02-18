@@ -7,6 +7,9 @@
         private int _expThreshold = 100;
         private string _genre;
 
+        private int _healValue = 10;
+        private int _spellPower = 0;
+
         public int Exp { get { return _exp; } set { _exp = value; } }
         public int Lvl { get { return _lvl; } }
         public string Genre { get { return _genre; } set { _genre = value;} }
@@ -21,6 +24,7 @@
             Health = MaxHealth;
             _damage += 1;
             Exp -= _expThreshold;
+            _spellPower += 10;
         }
 
         public void TestLvlUp()
@@ -89,5 +93,17 @@ public Player(string name, int maxHealth, int weaponDamage) : base(name, maxHeal
             }
         }
 
+        public override void Heal()
+        {
+            int amount = 0;
+
+            if (_spellPower > 0)
+                amount += _healValue + (_spellPower / 2);
+            else
+                amount += _healValue;
+
+            Health += amount;
+            Console.WriteLine($"{this.Name} se soigne et récupère {amount} PV");
+        }
     }
 }

@@ -39,6 +39,12 @@
             }
         }
 
+
+        public override void Heal()
+        {
+            Health += 10;
+        }
+
         public override void Attack()
         {
             base.Attack(10);
