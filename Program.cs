@@ -16,7 +16,7 @@
             //monster.Attack();
 
 
-            Duel duel1 = new Duel(player, monster);
+            Duel duel1 = new Duel(player, monster, 20);
             
             while(player.Health > 0)
             {
@@ -24,7 +24,7 @@
                 if (monster.Health == 0)
                 { 
                     monster = new Monster("blob2", 100, 5, player, 40);
-                    duel1 = new Duel(player, monster);
+                    duel1 = new Duel(player, monster, 50);
                 }
             }
             Console.WriteLine("Game Over");
