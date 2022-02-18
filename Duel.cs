@@ -52,12 +52,22 @@
 
         public void AfficherStatistiques()
         {
+<<<<<<< HEAD
+            Console.WriteLine(
+           $"Nombre de tours : {NbTours}\n" +
+           $"Dommages totaux causés au monstre : {PlayerDamageToMonster}\n" +
+           $"Dommages totaux causés au joueur : {MonsterDamageToPlayer}\n" +
+           $"Niveau joueur: {_player.Lvl}\n" +
+           $"Nombre total d'xp: {_player.Exp}"
+           );
+=======
             Console.WriteLine
                 ($"Nombre de tours : {NbTours}\n" +
                 $"Dommages totaux causés au monstre : {PlayerDamageToMonster}\n" +
                 $"Dommages totaux causés au joueur : {MonsterDamageToPlayer}\n" +
                 $"Nombre de vie a regenerer : {NbDeVieARegenerer}\n" 
                 );
+>>>>>>> main
         }
 
         public void LancerCombat()
@@ -83,7 +93,7 @@
             else
             {
                 Console.WriteLine($"Victoire ! Vous remportez {_monster.Reward} exp !");
-                _player.Exp =+ _monster.Reward;
+                _player.Exp += _monster.Reward;
                 _player.TestLvlUp();
                 RegenererVieJoueur();
             }
