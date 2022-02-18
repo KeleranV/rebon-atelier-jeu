@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\janic\\Source\\Repos\\rebon-atelier-jeu\\Atelier_jeu.csproj": {}
+    "C:\\Users\\janic\\source\\repos\\rebon-atelier-jeu\\Atelier_jeu.csproj": {}
   },
   "projects": {
-    "C:\\Users\\janic\\Source\\Repos\\rebon-atelier-jeu\\Atelier_jeu.csproj": {
+    "C:\\Users\\janic\\source\\repos\\rebon-atelier-jeu\\Atelier_jeu.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\janic\\Source\\Repos\\rebon-atelier-jeu\\Atelier_jeu.csproj",
+        "projectUniqueName": "C:\\Users\\janic\\source\\repos\\rebon-atelier-jeu\\Atelier_jeu.csproj",
         "projectName": "Atelier_jeu",
-        "projectPath": "C:\\Users\\janic\\Source\\Repos\\rebon-atelier-jeu\\Atelier_jeu.csproj",
+        "projectPath": "C:\\Users\\janic\\source\\repos\\rebon-atelier-jeu\\Atelier_jeu.csproj",
         "packagesPath": "C:\\Users\\janic\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\janic\\Source\\Repos\\rebon-atelier-jeu\\obj\\",
+        "outputPath": "C:\\Users\\janic\\source\\repos\\rebon-atelier-jeu\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

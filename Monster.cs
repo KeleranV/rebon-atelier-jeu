@@ -73,10 +73,10 @@
             damage = randomNumber;
             return damage;
         }
-        public static int MonsterRewardCalculation(int x, int y)
+        public static int MonsterRewardCalculation(int maxHp, int attack)
         {
             int reward = 0;
-            reward = (x / 2) + y;
+            reward = (maxHp / 2) + attack;
             return reward;
 
         }
