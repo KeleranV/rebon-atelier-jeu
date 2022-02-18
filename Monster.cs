@@ -6,7 +6,7 @@
 
         public int Reward { get { return _reward; } }
 
-        public Monster(string name, int maxHealth, int damage, Entity enemy, int reward) : base(name, maxHealth, damage)
+        public Monster(string name, int maxHealth, int damage, Entity enemy, int reward) : base(name, maxHealth, damage, 0)
         {
             this.Enemy = enemy;
             this._reward = reward;
@@ -39,5 +39,9 @@
             }
         }
 
+        public override void Attack()
+        {
+            base.Attack(10);
+        }
     }
 }

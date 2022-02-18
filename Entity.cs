@@ -27,7 +27,15 @@
         public int Armor
         {
             get { return _armor; }
-            set { _armor = value; }
+            set 
+            {
+                if (value < 0)
+                {
+                    value = 0;
+                } 
+                _armor = value; 
+            }
+            
         }
 
         public int MaxHealth
@@ -50,7 +58,7 @@
         {
             get { return _health; }
             set
-            {
+            { 
                 if (value < 0)
                 {
                     _health = 0;
@@ -66,20 +74,21 @@
             }
         }
 
-        public Entity(string name, int maxHealth, int damage)
+        public Entity(string name, int maxHealth, int damage, int armor)
         {
             _name = name;
             _maxHealth = maxHealth;
             _health = _maxHealth;
             _damage = damage;
-
+            _armor = armor;
         }
 
+        public abstract void Attack();
 
-        public virtual void Attack()
+        protected void Attack(int damage)
         {
             Console.WriteLine($"{this.Name} attaque ! {this.Enemy.Name} reçoit 10 dégats");
-            _enemy.Health -= 10;
+            _enemy.Health -= damage - _enemy._armor;
         }
 
         public void Heal()

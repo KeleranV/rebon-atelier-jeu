@@ -58,7 +58,7 @@
                 _nbTours++;
 
                 Console.Clear();
-                Console.WriteLine($"{_player.Name}: {_player.Health}pv");
+                Console.WriteLine($"{_player.Name} - Genre: {_player.Genre}: {_player.Health}pv Armor:{_player.Armor}");
                 Console.WriteLine($"{_monster.Name}: {_monster.Health}pv");
                 Console.WriteLine();
                 AfficherStatistiques();
