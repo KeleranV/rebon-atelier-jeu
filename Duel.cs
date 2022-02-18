@@ -7,8 +7,10 @@
         private Monster _monster;
 
         private int _nbTours = 0;
+        private int _nbDeVieARegenerer;
         private int _playerDamageToMonster = 0;
         private int _monsterDamageToPlayer = 0;
+      
 
         public Player Player
         {
@@ -25,6 +27,10 @@
             get { return _nbTours; }
         }
 
+        public int NbDeVieARegenerer
+        {
+            get { return _nbDeVieARegenerer; }
+        }
         public int PlayerDamageToMonster
         {
             get { return _playerDamageToMonster; }
@@ -35,19 +41,22 @@
             get { return _monsterDamageToPlayer; }
         }
 
-        public Duel(Player player, Monster monster)
+      
+        public Duel(Player player, Monster monster, int NbDeVieARegenerer)
         {
             _player = player;
             _monster = monster;
             player.Enemy = monster;
+            _nbDeVieARegenerer = NbDeVieARegenerer;
         }
 
         public void AfficherStatistiques()
         {
-            Console.WriteLine(
-                $"Nombre de tours : {NbTours}\n" +
+            Console.WriteLine
+                ($"Nombre de tours : {NbTours}\n" +
                 $"Dommages totaux causés au monstre : {PlayerDamageToMonster}\n" +
-                $"Dommages totaux causés au joueur : {MonsterDamageToPlayer}"
+                $"Dommages totaux causés au joueur : {MonsterDamageToPlayer}\n" +
+                $"Nombre de vie a regenerer : {NbDeVieARegenerer}\n" 
                 );
         }
 
@@ -76,9 +85,9 @@
                 Console.WriteLine($"Victoire ! Vous remportez {_monster.Reward} exp !");
                 _player.Exp =+ _monster.Reward;
                 _player.TestLvlUp();
+                RegenererVieJoueur();
             }
         }
-
         private void TourPlayer()
         {
             int action = _player.ChooseAction();
@@ -94,5 +103,12 @@
                 _monsterDamageToPlayer += _monster.Damage;
         }
 
+        private void RegenererVieJoueur()
+        {
+            _player.Health += NbDeVieARegenerer;
+
+
+
+         }   
     }
 }
