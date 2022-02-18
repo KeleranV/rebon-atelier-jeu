@@ -6,6 +6,13 @@
         private int _lvl = 1;
         private int _expThreshold = 100;
 
+
+        //Stats de base du joueur v1
+        private int _statVitality = 1;
+        private int _statStrength = 1;
+        private int _statMagic = 1;
+
+      
         public int Exp { get { return _exp; } set { _exp = value; } }
         public int Lvl { get { return _lvl; } }
 
@@ -16,13 +23,18 @@
             Console.WriteLine($"Vous passez au niveau {_lvl} !");
             _maxHealth += 10;
             Health = MaxHealth;
+
+            //Récompense par lvl up sujet au changement
             _damage += 1;
-            Exp -= _expThreshold;
+            _statMagic += 1;
+            _statStrength += 1;
+            _statVitality += 1;
+            Exp -= _expThreshold; //A changer
         }
 
         public void TestLvlUp()
         {
-            while(Exp > _expThreshold)
+            while(Exp > (_lvl*_expThreshold)) //Le level du joueur multiplie le threshold, le threshold change a chaque level.
             {
                 this.LvlUp();
             }

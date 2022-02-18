@@ -74,7 +74,7 @@
             else
             {
                 Console.WriteLine($"Victoire ! Vous remportez {_monster.Reward} exp !");
-                _player.Exp =+ _monster.Reward;
+                _player.Exp += _monster.Reward;
                 _player.TestLvlUp();
             }
         }
