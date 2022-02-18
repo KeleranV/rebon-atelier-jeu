@@ -8,23 +8,23 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\leo.vansimay\\.nuget\\packages\\": {},
+    "C:\\Users\\marti\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\leo.vansimay\\source\\repos\\Atelier_jeu_v3\\Atelier_jeu.csproj",
+      "projectUniqueName": "C:\\Users\\marti\\source\\repos\\KeleranV\\rebon-atelier-jeu\\Atelier_jeu.csproj",
       "projectName": "Atelier_jeu",
-      "projectPath": "C:\\Users\\leo.vansimay\\source\\repos\\Atelier_jeu_v3\\Atelier_jeu.csproj",
-      "packagesPath": "C:\\Users\\leo.vansimay\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\leo.vansimay\\source\\repos\\Atelier_jeu_v3\\obj\\",
+      "projectPath": "C:\\Users\\marti\\source\\repos\\KeleranV\\rebon-atelier-jeu\\Atelier_jeu.csproj",
+      "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\marti\\source\\repos\\KeleranV\\rebon-atelier-jeu\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\leo.vansimay\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
