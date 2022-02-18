@@ -5,9 +5,12 @@
         private int _exp = 0;
         private int _lvl = 1;
         private int _expThreshold = 100;
+        private string _genre;
 
         public int Exp { get { return _exp; } set { _exp = value; } }
         public int Lvl { get { return _lvl; } }
+        public string Genre { get { return _genre; } set { _genre = value;} }
+
 
         //Le joueur monte de niveau tout les 100 points d'experience
         public void LvlUp()
@@ -28,8 +31,9 @@
             }
         }
 
-        public Player(string name, int maxHealth, int damage) : base(name, maxHealth, damage)
+        public Player(string name, int maxHealth, int damage, string genre) : base(name, maxHealth, damage, 5)
         {
+            _genre = genre;
         }
 
         /**
@@ -41,7 +45,7 @@ public Player(string name, int maxHealth, int weaponDamage) : base(name, maxHeal
 
         public override void Attack()
         {
-            Enemy.Health -= Damage;
+            base.Attack(Damage);
             Console.WriteLine($"{this.Name} attaque ! {this.Enemy.Name} reçoit {Damage} dégats");
         }
 

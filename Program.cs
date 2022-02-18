@@ -6,12 +6,11 @@
         {
             Console.WriteLine("Entrez le nom de votre personnage :");
             string name = Console.ReadLine();
-            Player player = new Player(name, 100, 10);
-            //player.Attack();
+            Console.WriteLine("Dites nous votre genre");
+            string genre = Console.ReadLine();
+            Player player = new Player(name, 100, 10, genre);
 
-            Console.WriteLine(player.Name);
-            Console.WriteLine(player.MaxHealth);
-            Console.WriteLine(player.Damage);
+           
 
             Monster monster = new Monster("blob", 100, 5, player, 20);
             //monster.Attack();
