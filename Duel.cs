@@ -10,7 +10,7 @@
         private int _nbDeVieARegenerer;
         private int _playerDamageToMonster = 0;
         private int _monsterDamageToPlayer = 0;
-      
+
 
         public Player Player
         {
@@ -41,7 +41,7 @@
             get { return _monsterDamageToPlayer; }
         }
 
-      
+
         public Duel(Player player, Monster monster, int NbDeVieARegenerer)
         {
             _player = player;
@@ -52,27 +52,19 @@
 
         public void AfficherStatistiques()
         {
-<<<<<<< HEAD
             Console.WriteLine(
            $"Nombre de tours : {NbTours}\n" +
            $"Dommages totaux causés au monstre : {PlayerDamageToMonster}\n" +
            $"Dommages totaux causés au joueur : {MonsterDamageToPlayer}\n" +
            $"Niveau joueur: {_player.Lvl}\n" +
-           $"Nombre total d'xp: {_player.Exp}"
+           $"Nombre total d'xp: {_player.Exp}\n" +
+           $"Nombre de vie a regenerer : {NbDeVieARegenerer}"
            );
-=======
-            Console.WriteLine
-                ($"Nombre de tours : {NbTours}\n" +
-                $"Dommages totaux causés au monstre : {PlayerDamageToMonster}\n" +
-                $"Dommages totaux causés au joueur : {MonsterDamageToPlayer}\n" +
-                $"Nombre de vie a regenerer : {NbDeVieARegenerer}\n" 
-                );
->>>>>>> main
         }
 
         public void LancerCombat()
         {
-            while(_player.Health > 0 && _monster.Health > 0)
+            while (_player.Health > 0 && _monster.Health > 0)
             {
                 _nbTours++;
 
@@ -102,7 +94,7 @@
         {
             int action = _player.ChooseAction();
             _player.ExecuteAction(action);
-            if(action == 1)
+            if (action == 1)
                 _playerDamageToMonster += _player.Damage;
         }
         private void TourMonster()
@@ -119,6 +111,6 @@
 
 
 
-         }   
+        }
     }
 }
