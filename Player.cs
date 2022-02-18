@@ -5,6 +5,7 @@
         private int _exp = 0;
         private int _lvl = 1;
         private int _expThreshold = 100;
+        private string _genre;
 
 
         //Stats de base du joueur v1
@@ -13,8 +14,12 @@
         private int _statMagic = 1;
 
       
+        private int _healValue = 10;
+
         public int Exp { get { return _exp; } set { _exp = value; } }
         public int Lvl { get { return _lvl; } }
+        public string Genre { get { return _genre; } set { _genre = value;} }
+
 
         //Le joueur monte de niveau tout les 100 points d'experience
         public void LvlUp()
@@ -26,9 +31,11 @@
 
             //Récompense par lvl up sujet au changement
             _damage += 1;
-            _statMagic += 1;
+
+            _statMagic += 5;
             _statStrength += 1;
             _statVitality += 1;
+
             Exp -= _expThreshold; //A changer
         }
 
@@ -40,8 +47,9 @@
             }
         }
 
-        public Player(string name, int maxHealth, int damage) : base(name, maxHealth, damage)
+        public Player(string name, int maxHealth, int damage, string genre) : base(name, maxHealth, damage, 5)
         {
+            _genre = genre;
         }
 
         /**
@@ -53,7 +61,7 @@ public Player(string name, int maxHealth, int weaponDamage) : base(name, maxHeal
 
         public override void Attack()
         {
-            Enemy.Health -= Damage;
+            base.Attack(Damage);
             Console.WriteLine($"{this.Name} attaque ! {this.Enemy.Name} reçoit {Damage} dégats");
         }
 
@@ -97,5 +105,17 @@ public Player(string name, int maxHealth, int weaponDamage) : base(name, maxHeal
             }
         }
 
+        public override void Heal()
+        {
+            int amount = 0;
+
+            if (_statMagic > 0)
+                amount += _healValue + (_statMagic / 2);
+            else
+                amount += _healValue;
+
+            Health += amount;
+            Console.WriteLine($"{this.Name} se soigne et récupère {amount} PV");
+        }
     }
 }
