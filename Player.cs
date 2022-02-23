@@ -15,7 +15,9 @@
 
       
         private int _healValue = 10;
-
+        public int StatVitality { get { return _statVitality; } set { _statVitality = value;} }
+        public int StatStrength { get { return _statStrength; } set { _statStrength = value;} }
+        public int StatMagic { get { return _statMagic; } set { _statMagic = value;} }
         public int Exp { get { return _exp; } set { _exp = value; } }
         public int Lvl { get { return _lvl; } }
         public string Genre { get { return _genre; } set { _genre = value;} }

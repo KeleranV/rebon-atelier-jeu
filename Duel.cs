@@ -52,24 +52,31 @@
 
         public void AfficherStatistiques()
         {
-            Console.WriteLine(
-           $"Nombre de tours : {NbTours}\n" +
-           $"Dommages totaux causés au monstre : {PlayerDamageToMonster}\n" +
-           $"Dommages totaux causés au joueur : {MonsterDamageToPlayer}\n" +
-           $"Niveau joueur: {_player.Lvl}\n" +
-           $"Nombre total d'xp: {_player.Exp}\n" +
-           $"Nombre de vie a regenerer : {NbDeVieARegenerer}"
-           );
+            string nbTours = String.Format("{0,-50}", $"Nombre de tours : {NbTours}");
+            string playerDamageToMonster = String.Format("{0,-50}", $"Dommages totaux causés au monstre : {PlayerDamageToMonster}");
+            string monsterDamageToPlayer = String.Format("{0,-50}", $"Dommages totaux causés au joueur : {MonsterDamageToPlayer}");
+            string regenVie = String.Format("{0,-50}", $"Nombre de vie a regenerer : {NbDeVieARegenerer}");
+            string espace = String.Format("{0,-50}", "");
+
+            Console.WriteLine($"{nbTours} Genre: {_player.Genre}\n" +
+                $"{playerDamageToMonster} Niveau joueur: {_player.Lvl}\n" +
+                $"{monsterDamageToPlayer} Experience: {_player.Exp}\n" +
+                $"{regenVie} Armor: {_player.Armor}\n" +
+                $"{espace} Strength: {_player.StatStrength}\n" +
+                $"{espace} Vitality: {_player.StatVitality}\n" +
+                $"{espace} Magic: {_player.StatMagic}       \n"
+                );
         }
 
         public void LancerCombat()
         {
+            
             while (_player.Health > 0 && _monster.Health > 0)
             {
                 _nbTours++;
 
                 Console.Clear();
-                Console.WriteLine($"{_player.Name} - Genre: {_player.Genre}: {_player.Health}pv Armor:{_player.Armor}");
+                Console.WriteLine($"{_player.Name}:{_player.Health}pv");
                 Console.WriteLine($"{_monster.Name}: {_monster.Health}pv");
                 Console.WriteLine();
                 AfficherStatistiques();
