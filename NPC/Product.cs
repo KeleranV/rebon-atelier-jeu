@@ -1,4 +1,4 @@
-﻿namespace Atelier_jeu
+﻿namespace Jeu_1
 {
     public class Product
     {

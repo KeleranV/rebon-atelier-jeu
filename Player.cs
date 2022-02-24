@@ -2,6 +2,9 @@
 {
     public class Player : Entity
     {
+        private Inventory _inventory;
+        private Equipment _equipment;
+
         private int _exp = 0;
         private int _lvl = 1;
         private int _expThreshold = 100;
@@ -52,6 +55,9 @@
         public Player(string name, int maxHealth, int damage, string genre) : base(name, maxHealth, damage, 5)
         {
             _genre = genre;
+
+            _inventory = new Inventory();
+            _equipment = new Equipment(ref _inventory);
         }
 
         /**

@@ -1,4 +1,4 @@
-﻿namespace Atelier_jeu
+﻿namespace Jeu_1
 {
     public class NPC
     {
@@ -31,17 +31,7 @@
 
             for (int i = 0; i < m_Products.Count; i++)
             {
-                ConsoleColor qualityColor = ConsoleColor.Black;
-                switch (m_Products[i].Item.Quality)
-                {
-                    case EQuality.Poor: qualityColor = ConsoleColor.Gray; break;
-                    case EQuality.Common: qualityColor = ConsoleColor.White; break;
-                    case EQuality.Uncommon: qualityColor = ConsoleColor.Green; break;
-                    case EQuality.Rare: qualityColor = ConsoleColor.DarkBlue; break;
-                    case EQuality.Epic: qualityColor = ConsoleColor.Cyan; break;
-                    case EQuality.Legendary: qualityColor = ConsoleColor.Red; break;
-                }
-                Console.ForegroundColor = qualityColor;
+                Console.ForegroundColor = m_Products[i].Item.QualityColor;
                 Console.Write($"{i + 1}: {m_Products[i].Item.Name} -> {m_Products[i].Price} gold\n");
             }
             Console.ResetColor();
