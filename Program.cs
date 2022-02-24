@@ -11,8 +11,8 @@
             Console.WriteLine("Dites nous votre genre");
             string genre = Console.ReadLine();
             Player player = new Player(name, 100, 10, genre);
-            
-            
+
+
             
             Monster monster = Monster.GenerateMonster(Monster.RandomizeMonsterName(), Monster.RandomizeMonsterMaxHealth(), Monster.RandomizeMonsterDamage(), player, Monster.MonsterRewardCalculation(Monster.RandomizeMonsterMaxHealth(), Monster.RandomizeMonsterDamage()));
             //monster.Attack();

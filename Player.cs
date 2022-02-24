@@ -25,6 +25,9 @@
         public int Lvl { get { return _lvl; } }
         public string Genre { get { return _genre; } set { _genre = value;} }
 
+        public Inventory Inventory { get { return _inventory; } }
+        public Equipment Equipment { get { return _equipment; } }
+
 
         //Le joueur monte de niveau tout les 100 points d'experience
         public void LvlUp()
