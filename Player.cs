@@ -33,7 +33,6 @@
         public void LvlUp()
         {
             _lvl += 1;
-            Console.WriteLine($"Vous passez au niveau {_lvl} !");
             _maxHealth += 10;
             Health = MaxHealth;
 
@@ -61,6 +60,13 @@
 
             _inventory = new Inventory();
             _equipment = new Equipment(ref _inventory);
+
+            // Test equipment
+            EquipableItem bronzeSword = new EquipableItem(10, "Bronze Sword", EQuality.Poor, EEquipableType.MainHand,
+                new int[] { 0, 0, 5, 5, 0, 1, 10 });
+            EquipableItem woodenShield = new EquipableItem(10, "Wooden Shield", EQuality.Poor, EEquipableType.OffHand,
+                new int[] { 10, 0, 0, 0, 0, 0, 0 });
+            _equipment.EquipItems(new EquipableItem[] { bronzeSword, woodenShield });
         }
 
         /**
