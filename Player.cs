@@ -2,6 +2,9 @@
 {
     public class Player : Entity
     {
+        private Inventory _inventory;
+        private Equipment _equipment;
+
         private int _exp = 0;
         private int _lvl = 1;
         private int _expThreshold = 100;
@@ -22,12 +25,14 @@
         public int Lvl { get { return _lvl; } }
         public string Genre { get { return _genre; } set { _genre = value;} }
 
+        public Inventory Inventory { get { return _inventory; } }
+        public Equipment Equipment { get { return _equipment; } }
+
 
         //Le joueur monte de niveau tout les 100 points d'experience
         public void LvlUp()
         {
             _lvl += 1;
-            Console.WriteLine($"Vous passez au niveau {_lvl} !");
             _maxHealth += 10;
             Health = MaxHealth;
 
@@ -52,6 +57,16 @@
         public Player(string name, int maxHealth, int damage, string genre) : base(name, maxHealth, damage, 5)
         {
             _genre = genre;
+
+            _inventory = new Inventory();
+            _equipment = new Equipment(ref _inventory);
+
+            // Test equipment
+            EquipableItem bronzeSword = new EquipableItem(10, "Bronze Sword", EQuality.Poor, EEquipableType.MainHand,
+                new int[] { 0, 0, 5, 5, 0, 1, 10 });
+            EquipableItem woodenShield = new EquipableItem(10, "Wooden Shield", EQuality.Poor, EEquipableType.OffHand,
+                new int[] { 10, 0, 0, 0, 0, 0, 0 });
+            _equipment.EquipItems(new EquipableItem[] { bronzeSword, woodenShield });
         }
 
         /**

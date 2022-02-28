@@ -17,6 +17,7 @@
         {
             Duel duel1 = new Duel(player, firstMonster, vieARegenerer);
             Monster monster = firstMonster;
+
             while (player.Health > 0)
             {
                 duel1.LancerCombat();
@@ -30,7 +31,8 @@
 
         public static void Main(string[] args)
         {
-
+            Console.Title = "World of Console";
+          
             Player player = CreationPersonnage();
 
             Monster monster = Monster.GenerateMonster(
