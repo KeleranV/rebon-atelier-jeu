@@ -2,31 +2,42 @@
 {
     public class Program
     {
-        public static void Main(string[] args)
+        static Player player;
+        static Monster monster;
+        public static void CreationPLayer()
         {
             Console.WriteLine("Entrez le nom de votre personnage :");
             string name = Console.ReadLine();
             Console.WriteLine("Dites nous votre genre");
             string genre = Console.ReadLine();
-            Player player = new Player(name, 100, 10, genre);
+            player = new Player(name, 100, 1, 1, 10, genre);
 
-           
-
-            Monster monster = Monster.GenerateMonster(Monster.RandomizeMonsterName(), Monster.RandomizeMonsterMaxHealth(), Monster.RandomizeMonsterDamage(), player, Monster.MonsterRewardCalculation(Monster.RandomizeMonsterMaxHealth(), Monster.RandomizeMonsterDamage()));
-            //monster.Attack();
-
+        }
+        public static void InitializeCombat()
+        {
             int vieARegenerer = player.MaxHealth / 4;
             Duel duel1 = new Duel(player, monster, vieARegenerer);
-
             while (player.Health > 0)
             {
                 duel1.LancerCombat();
                 if (monster.Health == 0)
                 {
-                    monster = Monster.GenerateMonster(Monster.RandomizeMonsterName(), Monster.RandomizeMonsterMaxHealth(), Monster.RandomizeMonsterDamage(), player, Monster.MonsterRewardCalculation(Monster.RandomizeMonsterMaxHealth(), Monster.RandomizeMonsterDamage()));
+                    monster = Monster.GenerateMonster(Monster.RandomizeMonster("Plains"));
                     duel1 = new Duel(player, monster, vieARegenerer);
                 }
             }
+        }
+        public static void Main(string[] args)
+        {
+            CreationPLayer();
+
+
+
+            monster = Monster.GenerateMonster(Monster.RandomizeMonster("Plains"));
+            //monster.Attack();
+
+            InitializeCombat();
+          
             Console.WriteLine("Game Over");
         }
     }

@@ -8,16 +8,11 @@
         private string _genre;
 
 
-        //Stats de base du joueur v1
-        private int _statVitality = 1;
-        private int _statStrength = 1;
-        private int _statMagic = 1;
+        //Stats envoyé dans Entity.
+        
 
       
         private int _healValue = 10;
-        public int StatVitality { get { return _statVitality; } set { _statVitality = value;} }
-        public int StatStrength { get { return _statStrength; } set { _statStrength = value;} }
-        public int StatMagic { get { return _statMagic; } set { _statMagic = value;} }
         public int Exp { get { return _exp; } set { _exp = value; } }
         public int Lvl { get { return _lvl; } }
         public string Genre { get { return _genre; } set { _genre = value;} }
@@ -27,16 +22,15 @@
         public void LvlUp()
         {
             _lvl += 1;
-            Console.WriteLine($"Vous passez au niveau {_lvl} !");
             _maxHealth += 10;
             Health = MaxHealth;
 
             //Récompense par lvl up sujet au changement
             _damage += 1;
 
-            _statMagic += 5;
-            _statStrength += 1;
-            _statVitality += 1;
+            StatMagic += 5;
+            StatStrength += 1;
+            StatVitality += 1;
 
             Exp -= _expThreshold; //A changer
         }
@@ -49,7 +43,7 @@
             }
         }
 
-        public Player(string name, int maxHealth, int damage, string genre) : base(name, maxHealth, damage, 5)
+        public Player(string name, int maxHealth, int statStrength, int statVitality, int damage, string genre) : base(name, maxHealth, statStrength, statVitality, damage, 5)
         {
             _genre = genre;
         }
@@ -63,8 +57,7 @@ public Player(string name, int maxHealth, int weaponDamage) : base(name, maxHeal
 
         public override void Attack()
         {
-            base.Attack(Damage);
-            Console.WriteLine($"{this.Name} attaque ! {this.Enemy.Name} reçoit {Damage} dégats");
+            Attack(Damage);
         }
 
         public int ChooseAction()
@@ -111,8 +104,8 @@ public Player(string name, int maxHealth, int weaponDamage) : base(name, maxHeal
         {
             int amount = 0;
 
-            if (_statMagic > 0)
-                amount += _healValue + (_statMagic / 2);
+            if (StatMagic > 0)
+                amount += _healValue + (StatMagic / 2);
             else
                 amount += _healValue;
 

@@ -1,78 +1,153 @@
-﻿namespace Jeu_1
+﻿using Newtonsoft.Json;
+
+namespace Jeu_1
 {
     public class Monster : Entity
     {
         private int _reward;
+        private int _goldReward;
+        private int _lvl;
+        private static Player player;
 
         public int Reward { get { return _reward; } }
+        public int GoldReward { get { return _goldReward; } }
+        public int Lvl { get { return _lvl; } }
 
-        public Monster(string name, int maxHealth, int damage, Entity enemy, int reward) : base(name, maxHealth, damage, 0)
+        public Monster(string name, int maxHealth,int statStrength,int statVitality, int damage,int armor, Entity enemy, int reward, int level) : base(name, maxHealth, statStrength,statVitality, damage, armor)
         {
-            this.Enemy = enemy;
+            
             this._reward = reward;
+            this._lvl = level;
         }
-        public static string RandomizeMonsterName()
+        public static int RandomizeMonsterLvl(string zone)
         {
-            string name = "";
             Random rand = new Random();
-            int randomNumber = rand.Next(1, 13);
-            switch (randomNumber)
+            int randomNumber = 0;
+            if (zone == "Plains")
             {
-                case 1:
-                    name = "Goblin";
-                    break;
-                case 2:
-                    name = "Kobold";
-                    break;
-                case 3:
-                    name = "Slime";
-                    break;
-                case 4:
-                    name = "Fairy";
-                    break;
-                case 5:
-                    name = "Orc";
-                    break;
-                case 6:
-                    name = "Ogre";
-                    break;
-                case 7:
-                    name = "Bandit";
-                    break;
-                case 8:
-                    name = "Boar";
-                    break;
-                case 9:
-                    name = "Bear";
-                    break;
-                case 10:
-                    name = "Wolf";
-                    break;
-                case 11:
-                    name = "Bat";
-                    break;
-                case 12:
-                    name = "Ghost";
-                    break;
+                 randomNumber = rand.Next(1, 11);
+            }  
+            if (zone == "Forest")
+            {
+                randomNumber = rand.Next(10, 21);
             }
-            return name;
+            if (zone == "Beach")
+            {
+                randomNumber = rand.Next(20, 31);
+            }
+            if (zone == "Swamp")
+            {
+                randomNumber = rand.Next(30, 41);
+            }
+            if (zone == "Dark_Forest")
+            {
+                randomNumber = rand.Next(40, 51);
+            }
+            if (zone == "Aband_Town")
+            {
+                randomNumber = rand.Next(50, 61);
+            }
+            if (zone == "Swamp")
+            {
+                randomNumber = rand.Next(60, 71);
+            }
+            if (zone == "Grotto")
+            {
+                randomNumber = rand.Next(70, 81);
+            }
+            if (zone == "Mountains")
+            {
+                randomNumber = rand.Next(80, 91);
+            }
+            if (zone == "Volcano")
+            {
+                randomNumber = rand.Next(90, 101);
+            }
+            if (zone == "Hell")
+            {
+                randomNumber = rand.Next(100, 121);
+            }
+            return randomNumber;
         }
-        public static int RandomizeMonsterMaxHealth()
+
+        public static int RandomizeMonster(string zone)
+        {
+            Random rand = new Random();
+            int randomNumber = rand.Next(0, 5);
+            if (zone == "Plains")
+            {
+                randomNumber = rand.Next(0, 5);
+                return randomNumber;
+            }
+            if (zone == "Forest")
+            {
+                randomNumber = rand.Next(0, 5);
+                return randomNumber;
+            }
+            if (zone == "Beach")
+            {
+                randomNumber = rand.Next(0, 5);
+                return randomNumber;
+            }
+            if (zone == "Swamp")
+            {
+                randomNumber = rand.Next(0, 5);
+                return randomNumber;
+            }
+            if (zone == "Dark_Forest")
+            {
+                randomNumber = rand.Next(0, 5);
+                return randomNumber;
+            }
+            if (zone == "Aband_Town")
+            {
+                randomNumber = rand.Next(0, 5);
+                return randomNumber;
+            }
+            if (zone == "Crypt")
+            {
+                randomNumber = rand.Next(0, 5);
+                return randomNumber;
+            }
+            if (zone == "Grotto")
+            {
+                randomNumber = rand.Next(0, 5);
+                return randomNumber;
+            }
+            if (zone == "Mountains")
+            {
+                randomNumber = rand.Next(0, 5);
+                return randomNumber;
+            }
+            if (zone == "Volcano")
+            {
+                randomNumber = rand.Next(0, 5);
+                return randomNumber;
+            }
+            if (zone == "Hell")
+            {
+                randomNumber = rand.Next(0, 5);
+                return randomNumber;
+            }
+            return randomNumber;
+        }
+        
+        /*public static int RandomizeMonsterMaxHealth()
         {
             int maxHealth = 0;
             Random rand = new Random();
             int randomNumber = rand.Next(20, 71);
             maxHealth = randomNumber;
             return maxHealth;
-        }
-        public static int RandomizeMonsterDamage()
+        }*/
+        /*public static int RandomizeMonsterDamage()
         {
             int damage = 0;
             Random rand = new Random();
             int randomNumber = rand.Next(5, 15);
             damage = randomNumber;
             return damage;
-        }
+        }*/
         public static int MonsterRewardCalculation(int maxHp, int attack)
         {
             int reward = 0;
@@ -80,10 +155,89 @@
             return reward;
 
         }
-
-        public static Monster GenerateMonster(string name, int maxHealth, int damage, Entity enemy, int reward)
+        public static int MonsterGoldRewardCalculation(int level)
         {
-            Monster monster = new Monster(name, maxHealth, damage, enemy, reward);
+            int goldReward = level;
+            return goldReward;
+        }
+        public static string FetchMonsterData(string zone)
+        {
+            string path = "";
+            if (zone == "Plains")
+            {
+                path = @"\MonsterDataPlains.json";
+                return path;
+            }
+            if (zone == "Forest")
+            {
+                path = @"\MonsterDataForest.json";
+                return path;
+            }
+            if (zone == "Beach")
+            {
+                path = @"\MonsterDataBeach.json";
+                return path;
+            }
+            if (zone == "Swamp")
+            {
+                path = @"\MonsterDataSwamp.json";
+                return path;
+            }
+            if (zone == "Dark_Forest")
+            {
+                path = @"\MonsterDataDarkForest.json";
+                return path;
+            }
+            if (zone == "Aband_Town")
+            {
+                path = @"\MonsterDataAbandTown.json";
+                return path;
+            }
+            if (zone == "Crypt")
+            {
+                path = @"\MonsterDataCrypt.json";
+                return path;
+            }
+            if (zone == "Grotto")
+            {
+                path = @"\MonsterDataGrotto.json";
+                return path;
+            }
+            if (zone == "Mountains")
+            {
+                path = @"\MonsterDataMountains.json";
+                return path;
+            }
+            if (zone == "Volcano")
+            {
+                path = @"\MonsterDataVolcano.json";
+                return path;
+            }
+            if (zone == "Hell")
+            {
+                path = @"\MonsterDataHell.json";
+                return path;
+            }
+            return path;
+        }
+        public static Monster GenerateMonster(int x)
+        {
+            var CurrentDirectory = Environment.CurrentDirectory;
+            string path = FetchMonsterData("Plains");
+            string fullPath = CurrentDirectory + path;
+            StreamReader r = new StreamReader(fullPath);
+            string jsonString = r.ReadToEnd();
+            List<Monster> monsterList = JsonConvert.DeserializeObject<List<Monster>>(jsonString);
+            Monster monster = new Monster(
+                monsterList[x].Name,
+                monsterList[x].MaxHealth,
+                monsterList[x].StatStrength,
+                monsterList[x].StatVitality,
+                monsterList[x].Damage,
+                monsterList[x].Armor,
+                player,   //enemy
+                MonsterRewardCalculation(monsterList[x].MaxHealth, monsterList[x].Damage),  //reward
+                RandomizeMonsterLvl("Plains"));  // lvl
             return monster;
         }
 
@@ -117,7 +271,7 @@
 
         public override void Heal()
         {
-            Health += 10;
+            Health += 5;
         }
 
         public override void Attack()
