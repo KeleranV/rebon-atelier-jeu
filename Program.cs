@@ -4,6 +4,7 @@
     {
         static Player player;
         static Monster monster;
+        public static string zone;
         public static void CreationPLayer()
         {
             Console.WriteLine("Entrez le nom de votre personnage :");
@@ -22,7 +23,7 @@
                 duel1.LancerCombat();
                 if (monster.Health == 0)
                 {
-                    monster = Monster.GenerateMonster(Monster.RandomizeMonster("Plains"));
+                    monster = Monster.GenerateMonster(Monster.RandomizeMonster(zone));
                     duel1 = new Duel(player, monster, vieARegenerer);
                 }
             }
@@ -30,10 +31,11 @@
         public static void Main(string[] args)
         {
             CreationPLayer();
+            zone = ZoneMenu.Menu();
 
 
 
-            monster = Monster.GenerateMonster(Monster.RandomizeMonster("Plains"));
+            monster = Monster.GenerateMonster(Monster.RandomizeMonster(zone));
             //monster.Attack();
 
             InitializeCombat();

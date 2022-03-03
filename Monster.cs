@@ -5,12 +5,10 @@ namespace Jeu_1
     public class Monster : Entity
     {
         private int _reward;
-        private int _goldReward;
         private int _lvl;
         private static Player player;
 
         public int Reward { get { return _reward; } }
-        public int GoldReward { get { return _goldReward; } }
         public int Lvl { get { return _lvl; } }
 
         public Monster(string name, int maxHealth, int statStrength, int statVitality, int damage, int armor, Entity enemy, int reward, int level) : base(name, maxHealth, statStrength, statVitality, damage, armor)
@@ -223,7 +221,7 @@ namespace Jeu_1
         public static Monster GenerateMonster(int x)
         {
             var CurrentDirectory = Environment.CurrentDirectory;
-            string path = FetchMonsterData("Plains");
+            string path = FetchMonsterData(Program.zone);
             string fullPath = CurrentDirectory + path;
             StreamReader r = new StreamReader(fullPath);
             string jsonString = r.ReadToEnd();
@@ -237,7 +235,7 @@ namespace Jeu_1
                 monsterList[x].Armor,
                 player,   //enemy
                 MonsterRewardCalculation(monsterList[x].MaxHealth, monsterList[x].Damage),  //reward
-                RandomizeMonsterLvl("Plains"));  // lvl
+                RandomizeMonsterLvl(Program.zone));  // lvl
             return monster;
         }
 
@@ -276,7 +274,7 @@ namespace Jeu_1
 
         public override void Attack()
         {
-            base.Attack(10);
+            Attack(Damage);
         }
     }
 }

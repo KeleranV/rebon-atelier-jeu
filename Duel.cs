@@ -73,7 +73,7 @@
             Console.WriteLine(String.Format("{0,-40} | {1,-20} | {2,5}", $"Dommages totaux causés au monstre : {PlayerDamageToMonster}", $"Genre: { _player.Genre}", ""));
             Console.WriteLine(String.Format("{0,-40} | {1,-20} | {2,5}", $"Dommages totaux causés au joueur : {MonsterDamageToPlayer}", $"Level: { _player.Lvl}", $"Nom: {_monster.Name}"));
             Console.WriteLine(String.Format("{0,-40} | {1,-20} | {2,5}", $"Nombre de vie a regenerer : {NbDeVieARegenerer}", $"Exp: { _player.Exp}", $"Level: {_monster.Lvl}"));
-            Console.WriteLine(String.Format("{0,-40} | {1,-20} | {2,5}", $"Total pièces d'or: ", $"Strength: { _player.StatStrength}", $"Strength: {_monster.StatStrength}"));
+            Console.WriteLine(String.Format("{0,-40} | {1,-20} | {2,5}", $"Total pièces d'or:{_player.Inventory.Gold}", $"Strength: { _player.StatStrength}", $"Strength: {_monster.StatStrength}"));
             Console.WriteLine(String.Format("{0,-40} | {1,-20} | {2,5}", "", $"Vitality: { _player.StatVitality}", $"Vitality: {_monster.StatVitality}"));
             Console.WriteLine(String.Format("{0,-40} | {1,-20} | {2,5}", "", $"Damage: { _player.Damage}", $"Damage: {_monster.Damage}"));
             Console.WriteLine(String.Format("{0,-40} | {1,-20} | {2,5}", "", $"Armor: { _player.Armor}", $"Armor: {_monster.Armor}"));
@@ -106,6 +106,7 @@
             else
             {
                 _player.Exp += _monster.Reward;
+                _player.Inventory.AddGold(20);
                 _player.TestLvlUp();
                 RegenererVieJoueur();
             }
