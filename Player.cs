@@ -49,7 +49,7 @@
             }
         }
 
-        public Player(string name, int maxHealth, int statStrength, int statVitality, int damage, string genre) : base(name, maxHealth, statStrength, statVitality, damage, 5)
+        public Player(string name, int maxHealth, int statStrength, int statVitality, int damage, string genre) : base(name, maxHealth, statStrength, statVitality, damage, 0)
         {
             _genre = genre;
 
@@ -106,6 +106,7 @@ public Player(string name, int maxHealth, int weaponDamage) : base(name, maxHeal
                 case 2:
                     Heal();
                     break;
+
             }
         }
 
