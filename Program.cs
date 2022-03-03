@@ -2,21 +2,24 @@
 {
     public class Program
     {
-        static Player player;
-        static Monster monster;
-        public static void CreationPLayer()
+
+
+        private static Player CreationPersonnage()
         {
             Console.WriteLine("Entrez le nom de votre personnage :");
             string name = Console.ReadLine();
             Console.WriteLine("Dites nous votre genre");
             string genre = Console.ReadLine();
-            player = new Player(name, 100, 1, 1, 10, genre);
 
+
+            return new Player(name, 100, 10, genre);
         }
-        public static void InitializeCombat()
+
+        private static void GestionCombats(Player player, Monster firstMonster, int vieARegenerer)
         {
-            int vieARegenerer = player.MaxHealth / 4;
-            Duel duel1 = new Duel(player, monster, vieARegenerer);
+            Duel duel1 = new Duel(player, firstMonster, vieARegenerer);
+            Monster monster = firstMonster;
+
             while (player.Health > 0)
             {
                 duel1.LancerCombat();
@@ -27,6 +30,7 @@
                 }
             }
         }
+
         public static void Main(string[] args)
         {
             CreationPLayer();
@@ -38,6 +42,7 @@
 
             InitializeCombat();
           
+
             Console.WriteLine("Game Over");
         }
     }
