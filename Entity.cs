@@ -2,21 +2,14 @@
 {
     public abstract class Entity
     {
-        private string _name;
         protected int _maxHealth;
-        private int _statStrength = 1;
-        private int _statVitality = 1;
-        protected int _armor = 0;
-        protected int _damage = 0;
-        private int _statMagic = 1;
         private int _health;
         private Entity _enemy;
+        private string _name;
+        protected int _armor = 0;
+        protected int _damage = 0;
 
-        public string Name { get { return _name; } set { _name = value; } }
-        public int MaxHealth { get { return _maxHealth; } set { _maxHealth = value; } }
-        public int StatStrength { get { return _statStrength; } set { _statStrength = value; } }
-        public int StatVitality { get { return _statVitality; } set { _statVitality = value; } }
-        public int StatMagic { get { return _statMagic; } set { _statMagic = value; } }
+
         public int Damage
         {
             get { return _damage; }
@@ -31,6 +24,7 @@
                 }
             }
         }
+
         public int Armor
         {
             get { return _armor; }
@@ -44,7 +38,23 @@
             }
             
         }
-        public Entity Enemy { get { return _enemy; } set { _enemy = value; } }
+
+        public int MaxHealth
+        {
+            get { return _maxHealth; }
+        }
+
+        public Entity Enemy
+        {
+            get { return _enemy; }
+            set { _enemy = value; }
+        }
+
+        public string Name
+        {
+            get { return _name; }
+        }
+
         public int Health
         {
             get { return _health; }
@@ -65,13 +75,11 @@
             }
         }
 
-        public Entity(string name, int maxHealth,int statStrength,int statVitality, int damage, int armor)
+        public Entity(string name, int maxHealth, int damage, int armor)
         {
             _name = name;
             _maxHealth = maxHealth;
             _health = _maxHealth;
-            _statStrength = statStrength;
-            _statVitality = statVitality;
             _damage = damage;
             _armor = armor;
         }
@@ -80,8 +88,8 @@
 
         protected void Attack(int damage)
         {
-            //Console.WriteLine($"{this.Name} attaque ! {this.Enemy.Name} reçoit 10 dégats");
-            this._enemy.Health -= damage - this._enemy._armor;
+            Console.WriteLine($"{this.Name} attaque ! {this.Enemy.Name} reçoit 10 dégats");
+            _enemy.Health -= damage - _enemy._armor;
         }
 
         public abstract void Heal();
