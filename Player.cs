@@ -33,6 +33,7 @@
         public void LvlUp()
         {
             _lvl += 1;
+            Console.WriteLine($"Vous passez au niveau {_lvl} !");
             _maxHealth += 10;
             Health = MaxHealth;
 
