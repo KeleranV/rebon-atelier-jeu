@@ -1,0 +1,42 @@
+[
+    {
+        "Name": "Slime",
+        "MaxHealth": "50",
+        "StatStrength": "1",
+        "StatVitality": "1",
+        "Damage": "1",
+        "Armor": "1"
+    },
+    {
+        "Name": "Goblin",
+        "MaxHealth": "55",
+        "StatStrength": "2",
+        "StatVitality": "2",
+        "Damage": "2",
+        "Armor": "2"
+    },
+    {
+        "Name": "Kobold",
+        "MaxHealth": "60",
+        "StatStrength": "3",
+        "StatVitality": "3",
+        "Damage": "3",
+        "Armor": "3"
+    },
+    {
+        "Name": "Hyena",
+        "MaxHealth": "65",
+        "StatStrength": "4",
+        "StatVitality": "4",
+        "Damage": "4",
+        "Armor": "4"
+    },
+    {
+        "Name": "Bandit",
+        "MaxHealth": "70",
+        "StatStrength": "5",
+        "StatVitality": "5",
+        "Damage": "5",
+        "Armor": "5"
+    }
+]

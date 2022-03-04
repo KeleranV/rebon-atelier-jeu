@@ -1,0 +1,42 @@
+[
+    {
+        "Name": "Hobgoblin",
+        "MaxHealth": "195",
+        "StatStrength": "30",
+        "StatVitality": "30",
+        "Damage": "30",
+        "Armor": "30"
+    },
+    {
+        "Name": "Kobold Officer",
+        "MaxHealth": "205",
+        "StatStrength": "32",
+        "StatVitality": "32",
+        "Damage": "32",
+        "Armor": "32"
+    },
+    {
+        "Name": "Goblin General",
+        "MaxHealth": "210",
+        "StatStrength": "33",
+        "StatVitality": "33",
+        "Damage": "33",
+        "Armor": "33"
+    },
+    {
+        "Name": "Mountain Bandit",
+        "MaxHealth": "215",
+        "StatStrength": "34",
+        "StatVitality": "34",
+        "Damage": "34",
+        "Armor": "34"
+    },
+    {
+        "Name": "Rock Golem",
+        "MaxHealth": "220",
+        "StatStrength": "35",
+        "StatVitality": "35",
+        "Damage": "35",
+        "Armor": "35"
+    }
+]

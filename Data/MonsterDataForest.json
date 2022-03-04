@@ -1,0 +1,42 @@
+[
+    {
+        "Name": "Wolf",
+        "MaxHealth": "75",
+        "StatStrength": "6",
+        "StatVitality": "6",
+        "Damage": "6",
+        "Armor": "6"
+    },
+    {
+        "Name": "Bear",
+        "MaxHealth": "80",
+        "StatStrength": "7",
+        "StatVitality": "7",
+        "Damage": "7",
+        "Armor": "7"
+    },
+    {
+        "Name": "Boar",
+        "MaxHealth": "85",
+        "StatStrength": "8",
+        "StatVitality": "8",
+        "Damage": "8",
+        "Armor": "8"
+    },
+    {
+        "Name": "Goblin",
+        "MaxHealth": "80",
+        "StatStrength": "8",
+        "StatVitality": "8",
+        "Damage": "8",
+        "Armor": "8"
+    },
+    {
+        "Name": "Kobold",
+        "MaxHealth": "85",
+        "StatStrength": "9",
+        "StatVitality": "9",
+        "Damage": "9",
+        "Armor": "9"
+    }
+]

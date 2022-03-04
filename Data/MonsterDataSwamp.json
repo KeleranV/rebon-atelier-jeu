@@ -1,0 +1,42 @@
+[
+    {
+        "Name": "Bat",
+        "MaxHealth": "115",
+        "StatStrength": "14",
+        "StatVitality": "14",
+        "Damage": "14",
+        "Armor": "14"
+    },
+    {
+        "Name": "Vulture",
+        "MaxHealth": "120",
+        "StatStrength": "15",
+        "StatVitality": "15",
+        "Damage": "15",
+        "Armor": "15"
+    },
+    {
+        "Name": "Bog Beast",
+        "MaxHealth": "125",
+        "StatStrength": "16",
+        "StatVitality": "16",
+        "Damage": "16",
+        "Armor": "16"
+    },
+    {
+        "Name": "Giant Slime",
+        "MaxHealth": "110",
+        "StatStrength": "13",
+        "StatVitality": "13",
+        "Damage": "13",
+        "Armor": "13"
+    },
+    {
+        "Name": "Kobold Alpha",
+        "MaxHealth": "120",
+        "StatStrength": "15",
+        "StatVitality": "15",
+        "Damage": "15",
+        "Armor": "15"
+    }
+]

@@ -1,10 +1,14 @@
 ﻿namespace Jeu_1
 {
     public class Program
-    {
+    {   //Variables
         static Player player;
         static Monster monster;
-        public static string zone;
+        public static Zone zone;
+        public static List<Monster> monsterList;
+        public static List<Zone> zoneList;
+
+        //Controller
         public static void CreationPLayer()
         {
             Console.WriteLine("Entrez le nom de votre personnage :");
@@ -23,23 +27,21 @@
                 duel1.LancerCombat();
                 if (monster.Health == 0)
                 {
-                    monster = Monster.GenerateMonster(Monster.RandomizeMonster(zone));
+                    monster = Monster.GenerateMonster(Monster.RandomizeMonster(zone.Name),monsterList);
                     duel1 = new Duel(player, monster, vieARegenerer);
                 }
             }
         }
+
+        //Main Program
         public static void Main(string[] args)
         {
             CreationPLayer();
+            zoneList = Zone.GetZoneData();
             zone = ZoneMenu.Menu();
-
-
-
-            monster = Monster.GenerateMonster(Monster.RandomizeMonster(zone));
-            //monster.Attack();
-
+            monsterList = Monster.GetMonsterData();
+            monster = Monster.GenerateMonster(Monster.RandomizeMonster(zone.Name),monsterList);
             InitializeCombat();
-
             Console.WriteLine("Game Over");
         }
     }

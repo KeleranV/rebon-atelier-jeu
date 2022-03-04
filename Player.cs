@@ -1,30 +1,32 @@
 ﻿namespace Jeu_1
 {
     public class Player : Entity
-    {
+    {   //Variables
         private Inventory _inventory;
         private Equipment _equipment;
-
         private int _exp = 0;
         private int _lvl = 1;
         private int _expThreshold = 100;
         private string _genre;
-
-
-        //Stats envoyé dans Entity.
-
-
-
         private int _healValue = 10;
+
+        //Getters / Setters
         public int Exp { get { return _exp; } set { _exp = value; } }
         public int Lvl { get { return _lvl; } }
         public string Genre { get { return _genre; } set { _genre = value; } }
-
         public Inventory Inventory { get { return _inventory; } }
         public Equipment Equipment { get { return _equipment; } }
+        
+        //Constructor
+        public Player(string name, int maxHealth, int statStrength, int statVitality, int damage, string genre) : base(name, maxHealth, statStrength, statVitality, damage, 0)
+        {
+            _genre = genre;
 
-
-        //Le joueur monte de niveau tout les 100 points d'experience
+            _inventory = new Inventory();
+            _equipment = new Equipment(ref _inventory);
+        }
+            
+        //Methods
         public void LvlUp()
         {
             _lvl += 1;
@@ -39,8 +41,7 @@
             StatVitality += 1;
 
             Exp -= _expThreshold; //A changer
-        }
-
+        } //Le joueur monte de niveau tout les 100 points d'experience
         public void TestLvlUp()
         {
             while (Exp > (_lvl * _expThreshold)) //Le level du joueur multiplie le threshold, le threshold change a chaque level.
@@ -48,27 +49,10 @@
                 this.LvlUp();
             }
         }
-
-        public Player(string name, int maxHealth, int statStrength, int statVitality, int damage, string genre) : base(name, maxHealth, statStrength, statVitality, damage, 0)
-        {
-            _genre = genre;
-
-            _inventory = new Inventory();
-            _equipment = new Equipment(ref _inventory);
-        }
-
-        /**
-public Player(string name, int maxHealth, int weaponDamage) : base(name, maxHealth)
-{
-   _weaponDamage = weaponDamage;
-}
-**/
-
         public override void Attack()
         {
             Attack(Damage);
         }
-
         public int ChooseAction()
         {
             bool isFormatOK = false;
@@ -95,7 +79,6 @@ public Player(string name, int maxHealth, int weaponDamage) : base(name, maxHeal
             }
             return choice;
         }
-
         public void ExecuteAction(int action)
         {
             switch (action)
@@ -106,10 +89,8 @@ public Player(string name, int maxHealth, int weaponDamage) : base(name, maxHeal
                 case 2:
                     Heal();
                     break;
-
             }
         }
-
         public override void Heal()
         {
             int amount = 0;

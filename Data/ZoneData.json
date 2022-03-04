@@ -1,0 +1,68 @@
+[
+    {
+        "Name": "Plains",
+        "Position": "0",
+        "MinLvl": "1",
+        "MaxLvl": "10"
+    },
+    {
+        "Name": "Forest",
+        "Position": "1",
+        "MinLvl": "10",
+        "MaxLvl": "20"
+    },
+    {
+        "Name": "Beach",
+        "Position": "2",
+        "MinLvl": "20",
+        "MaxLvl": "30"
+    },
+    {
+        "Name": "Swamp",
+        "Position": "3",
+        "MinLvl": "30",
+        "MaxLvl": "40"
+    },
+    {
+        "Name": "DarkForest",
+        "Position": "4",
+        "MinLvl": "40",
+        "MaxLvl": "50"
+    },
+    {
+        "Name": "AbandTown",
+        "Position": "5",
+        "MinLvl": "50",
+        "MaxLvl": "60"
+    },
+    {
+        "Name": "Crypt",
+        "Position": "6",
+        "MinLvl": "60",
+        "MaxLvl": "70"
+    },
+    {
+        "Name": "Grotto",
+        "Position": "7",
+        "MinLvl": "70",
+        "MaxLvl": "80"
+    },
+    {
+        "Name": "Mountains",
+        "Position": "8",
+        "MinLvl": "80",
+        "MaxLvl": "90"
+    },
+    {
+        "Name": "Volcano",
+        "Position": "9",
+        "MinLvl": "90",
+        "MaxLvl": "100"
+    },
+    {
+        "Name": "Hell",
+        "Position": "10",
+        "MinLvl": "100",
+        "MaxLvl": "110"
+    }
+]

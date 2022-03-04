@@ -1,0 +1,338 @@
+[
+    {
+        "Name": "Slime",
+        "MaxHealth": "50",
+        "StatStrength": "1",
+        "StatVitality": "1",
+        "Damage": "1",
+        "Armor": "1"
+    },
+    {
+        "Name": "Goblin",
+        "MaxHealth": "55",
+        "StatStrength": "2",
+        "StatVitality": "2",
+        "Damage": "2",
+        "Armor": "2"
+    },
+    {
+        "Name": "Kobold",
+        "MaxHealth": "60",
+        "StatStrength": "3",
+        "StatVitality": "3",
+        "Damage": "3",
+        "Armor": "3"
+    },
+    {
+        "Name": "Hyena",
+        "MaxHealth": "65",
+        "StatStrength": "4",
+        "StatVitality": "4",
+        "Damage": "4",
+        "Armor": "4"
+    },
+    {
+        "Name": "Bandit",
+        "MaxHealth": "70",
+        "StatStrength": "5",
+        "StatVitality": "5",
+        "Damage": "5",
+        "Armor": "5"
+    },
+    {
+        "Name": "Wolf",
+        "MaxHealth": "75",
+        "StatStrength": "6",
+        "StatVitality": "6",
+        "Damage": "6",
+        "Armor": "6"
+    },
+    {
+        "Name": "Bear",
+        "MaxHealth": "80",
+        "StatStrength": "7",
+        "StatVitality": "7",
+        "Damage": "7",
+        "Armor": "7"
+    },
+    {
+        "Name": "Boar",
+        "MaxHealth": "85",
+        "StatStrength": "8",
+        "StatVitality": "8",
+        "Damage": "8",
+        "Armor": "8"
+    },
+    {
+        "Name": "Crab",
+        "MaxHealth": "90",
+        "StatStrength": "9",
+        "StatVitality": "9",
+        "Damage": "9",
+        "Armor": "9"
+    },
+    {
+        "Name": "Starfish",
+        "MaxHealth": "95",
+        "StatStrength": "10",
+        "StatVitality": "10",
+        "Damage": "10",
+        "Armor": "10"
+    },
+    {
+        "Name": "Lobster",
+        "MaxHealth": "100",
+        "StatStrength": "11",
+        "StatVitality": "11",
+        "Damage": "11",
+        "Armor": "11"
+    },
+    {
+        "Name": "Seal",
+        "MaxHealth": "105",
+        "StatStrength": "12",
+        "StatVitality": "12",
+        "Damage": "12",
+        "Armor": "12"
+    },
+    {
+        "Name": "Octopus",
+        "MaxHealth": "110",
+        "StatStrength": "13",
+        "StatVitality": "13",
+        "Damage": "13",
+        "Armor": "13"
+    },
+    {
+        "Name": "Bat",
+        "MaxHealth": "115",
+        "StatStrength": "14",
+        "StatVitality": "14",
+        "Damage": "14",
+        "Armor": "14"
+    },
+    {
+        "Name": "Vulture",
+        "MaxHealth": "120",
+        "StatStrength": "15",
+        "StatVitality": "15",
+        "Damage": "15",
+        "Armor": "15"
+    },
+    {
+        "Name": "Bog Beast",
+        "MaxHealth": "125",
+        "StatStrength": "16",
+        "StatVitality": "16",
+        "Damage": "16",
+        "Armor": "16"
+    },
+    {
+        "Name": "Treant",
+        "MaxHealth": "130",
+        "StatStrength": "17",
+        "StatVitality": "17",
+        "Damage": "17",
+        "Armor": "17"
+    },
+    {
+        "Name": "Wood Elf",
+        "MaxHealth": "135",
+        "StatStrength": "18",
+        "StatVitality": "18",
+        "Damage": "18",
+        "Armor": "18"
+    },
+    {
+        "Name": "Black Bear",
+        "MaxHealth": "140",
+        "StatStrength": "19",
+        "StatVitality": "19",
+        "Damage": "19",
+        "Armor": "19"
+    },
+    {
+        "Name": "Giant Boar",
+        "MaxHealth": "145",
+        "StatStrength": "20",
+        "StatVitality": "20",
+        "Damage": "20",
+        "Armor": "20"
+    },
+    {
+        "Name": "Thief",
+        "MaxHealth": "150",
+        "StatStrength": "21",
+        "StatVitality": "21",
+        "Damage": "21",
+        "Armor": "21"
+    },
+    {
+        "Name": "Giant Rat",
+        "MaxHealth": "155",
+        "StatStrength": "22",
+        "StatVitality": "22",
+        "Damage": "22",
+        "Armor": "22"
+    },
+    {
+        "Name": "Skeleton",
+        "MaxHealth": "160",
+        "StatStrength": "23",
+        "StatVitality": "23",
+        "Damage": "23",
+        "Armor": "23"
+    },
+    {
+        "Name": "Zombie",
+        "MaxHealth": "165",
+        "StatStrength": "24",
+        "StatVitality": "24",
+        "Damage": "24",
+        "Armor": "24"
+    },
+    {
+        "Name": "Ghost",
+        "MaxHealth": "170",
+        "StatStrength": "25",
+        "StatVitality": "25",
+        "Damage": "25",
+        "Armor": "25"
+    },
+    {
+        "Name": "Wraith",
+        "MaxHealth": "175",
+        "StatStrength": "26",
+        "StatVitality": "26",
+        "Damage": "26",
+        "Armor": "26"
+    },
+    {
+        "Name": "Lich",
+        "MaxHealth": "180",
+        "StatStrength": "27",
+        "StatVitality": "27",
+        "Damage": "27",
+        "Armor": "27"
+    },
+    {
+        "Name": "Ogre",
+        "MaxHealth": "185",
+        "StatStrength": "28",
+        "StatVitality": "28",
+        "Damage": "28",
+        "Armor": "28"
+    },
+    {
+        "Name": "Orc",
+        "MaxHealth": "190",
+        "StatStrength": "29",
+        "StatVitality": "29",
+        "Damage": "29",
+        "Armor": "29"
+    },
+    {
+        "Name": "Hobgoblin",
+        "MaxHealth": "195",
+        "StatStrength": "30",
+        "StatVitality": "30",
+        "Damage": "30",
+        "Armor": "30"
+    },
+    {
+        "Name": "Grizzly",
+        "MaxHealth": "200",
+        "StatStrength": "31",
+        "StatVitality": "31",
+        "Damage": "31",
+        "Armor": "31"
+    },
+    {
+        "Name": "Kobold Officer",
+        "MaxHealth": "205",
+        "StatStrength": "32",
+        "StatVitality": "32",
+        "Damage": "32",
+        "Armor": "32"
+    },
+    {
+        "Name": "Goblin General",
+        "MaxHealth": "210",
+        "StatStrength": "33",
+        "StatVitality": "33",
+        "Damage": "33",
+        "Armor": "33"
+    },
+    {
+        "Name": "Mountain Bandit",
+        "MaxHealth": "215",
+        "StatStrength": "34",
+        "StatVitality": "34",
+        "Damage": "34",
+        "Armor": "34"
+    },
+    {
+        "Name": "Rock Golem",
+        "MaxHealth": "220",
+        "StatStrength": "35",
+        "StatVitality": "35",
+        "Damage": "35",
+        "Armor": "35"
+    },
+    {
+        "Name": "Dragon",
+        "MaxHealth": "225",
+        "StatStrength": "36",
+        "StatVitality": "36",
+        "Damage": "36",
+        "Armor": "36"
+    },
+    {
+        "Name": "Fire Bat",
+        "MaxHealth": "230",
+        "StatStrength": "37",
+        "StatVitality": "37",
+        "Damage": "37",
+        "Armor": "37"
+    },
+    {
+        "Name": "Fire Elemental",
+        "MaxHealth": "235",
+        "StatStrength": "38",
+        "StatVitality": "38",
+        "Damage": "38",
+        "Armor": "38"
+    },
+    {
+        "Name": "Magma Slime",
+        "MaxHealth": "240",
+        "StatStrength": "39",
+        "StatVitality": "39",
+        "Damage": "39",
+        "Armor": "39"
+    },
+    {
+        "Name": "Dragon Whelp",
+        "MaxHealth": "245",
+        "StatStrength": "40",
+        "StatVitality": "40",
+        "Damage": "40",
+        "Armor": "40"
+    },
+    {
+        "Name": "Demon",
+        "MaxHealth": "250",
+        "StatStrength": "41",
+        "StatVitality": "41",
+        "Damage": "41",
+        "Armor": "41"
+    },
+    {
+        "Name": "Skeletal Knight",
+        "MaxHealth": "255",
+        "StatStrength": "42",
+        "StatVitality": "42",
+        "Damage": "42",
+        "Armor": "42"
+    }
+]

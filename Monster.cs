@@ -3,20 +3,24 @@
 namespace Jeu_1
 {
     public class Monster : Entity
-    {
+    {   //Variables
         private int _reward;
         private int _lvl;
         private static Player player;
 
+        //Getters / Setters
         public int Reward { get { return _reward; } }
         public int Lvl { get { return _lvl; } }
 
+        //Constructor
         public Monster(string name, int maxHealth, int statStrength, int statVitality, int damage, int armor, Entity enemy, int reward, int level) : base(name, maxHealth, statStrength, statVitality, damage, armor)
         {
 
             this._reward = reward;
             this._lvl = level;
         }
+
+        //Methods
         public static int RandomizeMonsterLvl(string zone)
         {
             Random rand = new Random();
@@ -67,7 +71,6 @@ namespace Jeu_1
             }
             return randomNumber;
         }
-
         public static int RandomizeMonster(string zone)
         {
             Random rand = new Random();
@@ -129,116 +132,47 @@ namespace Jeu_1
             }
             return randomNumber;
         }
-
-        /*public static int RandomizeMonsterMaxHealth()
-        {
-            int maxHealth = 0;
-            Random rand = new Random();
-            int randomNumber = rand.Next(20, 71);
-            maxHealth = randomNumber;
-            return maxHealth;
-        }*/
-        /*public static int RandomizeMonsterDamage()
-        {
-            int damage = 0;
-            Random rand = new Random();
-            int randomNumber = rand.Next(5, 15);
-            damage = randomNumber;
-            return damage;
-        }*/
         public static int MonsterRewardCalculation(int maxHp, int attack)
         {
             int reward = 0;
             reward = (maxHp / 2) + attack;
             return reward;
-
         }
         public static int MonsterGoldRewardCalculation(int level)
         {
             int goldReward = level;
             return goldReward;
         }
-        public static string FetchMonsterData(string zone)
+        public static string FetchMonsterData(int x)
         {
             string path = "";
-            if (zone == "Plains")
-            {
-                path = @"\MonsterDataPlains.json";
-                return path;
-            }
-            if (zone == "Forest")
-            {
-                path = @"\MonsterDataForest.json";
-                return path;
-            }
-            if (zone == "Beach")
-            {
-                path = @"\MonsterDataBeach.json";
-                return path;
-            }
-            if (zone == "Swamp")
-            {
-                path = @"\MonsterDataSwamp.json";
-                return path;
-            }
-            if (zone == "Dark_Forest")
-            {
-                path = @"\MonsterDataDarkForest.json";
-                return path;
-            }
-            if (zone == "Aband_Town")
-            {
-                path = @"\MonsterDataAbandTown.json";
-                return path;
-            }
-            if (zone == "Crypt")
-            {
-                path = @"\MonsterDataCrypt.json";
-                return path;
-            }
-            if (zone == "Grotto")
-            {
-                path = @"\MonsterDataGrotto.json";
-                return path;
-            }
-            if (zone == "Mountains")
-            {
-                path = @"\MonsterDataMountains.json";
-                return path;
-            }
-            if (zone == "Volcano")
-            {
-                path = @"\MonsterDataVolcano.json";
-                return path;
-            }
-            if (zone == "Hell")
-            {
-                path = @"\MonsterDataHell.json";
-                return path;
-            }
+            path = $@"\MonsterData{Program.zoneList[x].Name}.json";
             return path;
         }
-        public static Monster GenerateMonster(int x)
+        public static Monster GenerateMonster(int x, List<Monster> liste)
+        { 
+            Monster monster = new Monster(
+                liste[x].Name,
+                liste[x].MaxHealth,
+                liste[x].StatStrength,
+                liste[x].StatVitality,
+                liste[x].Damage,
+                liste[x].Armor,
+                player,   //enemy
+                MonsterRewardCalculation(liste[x].MaxHealth, liste[x].Damage),  //reward
+                RandomizeMonsterLvl(Program.zone.Name));  // lvl
+            return monster;
+        }
+        public static List<Monster> GetMonsterData()
         {
             var CurrentDirectory = Environment.CurrentDirectory;
-            string path = FetchMonsterData(Program.zone);
+            string path = FetchMonsterData(Program.zone.Position);
             string fullPath = CurrentDirectory + path;
             StreamReader r = new StreamReader(fullPath);
             string jsonString = r.ReadToEnd();
             List<Monster> monsterList = JsonConvert.DeserializeObject<List<Monster>>(jsonString);
-            Monster monster = new Monster(
-                monsterList[x].Name,
-                monsterList[x].MaxHealth,
-                monsterList[x].StatStrength,
-                monsterList[x].StatVitality,
-                monsterList[x].Damage,
-                monsterList[x].Armor,
-                player,   //enemy
-                MonsterRewardCalculation(monsterList[x].MaxHealth, monsterList[x].Damage),  //reward
-                RandomizeMonsterLvl(Program.zone));  // lvl
-            return monster;
+            return monsterList;
         }
-
         public int ChooseAction()
         {
             if (this.Health == this.MaxHealth)
@@ -265,8 +199,6 @@ namespace Jeu_1
                     break;
             }
         }
-
-
         public override void Heal()
         {
             Health += 5;

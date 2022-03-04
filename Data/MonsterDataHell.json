@@ -1,0 +1,42 @@
+[
+    {
+        "Name": "Dragon",
+        "MaxHealth": "255",
+        "StatStrength": "36",
+        "StatVitality": "36",
+        "Damage": "36",
+        "Armor": "36"
+    },
+    {
+        "Name": "Fire Elemental",
+        "MaxHealth": "265",
+        "StatStrength": "38",
+        "StatVitality": "38",
+        "Damage": "38",
+        "Armor": "38"
+    },
+    {
+        "Name": "Magma Slime",
+        "MaxHealth": "250",
+        "StatStrength": "39",
+        "StatVitality": "39",
+        "Damage": "39",
+        "Armor": "39"
+    },
+    {
+        "Name": "Demon",
+        "MaxHealth": "270",
+        "StatStrength": "41",
+        "StatVitality": "41",
+        "Damage": "41",
+        "Armor": "41"
+    },
+    {
+        "Name": "Skeletal Knight",
+        "MaxHealth": "285",
+        "StatStrength": "42",
+        "StatVitality": "42",
+        "Damage": "42",
+        "Armor": "42"
+    }
+]

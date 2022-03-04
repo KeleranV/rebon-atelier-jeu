@@ -1,0 +1,42 @@
+[   
+    {
+        "Name": "Skeleton",
+        "MaxHealth": "160",
+        "StatStrength": "23",
+        "StatVitality": "23",
+        "Damage": "23",
+        "Armor": "23"
+    },
+    {
+        "Name": "Zombie",
+        "MaxHealth": "165",
+        "StatStrength": "24",
+        "StatVitality": "24",
+        "Damage": "24",
+        "Armor": "24"
+    },
+    {
+        "Name": "Ghost",
+        "MaxHealth": "170",
+        "StatStrength": "25",
+        "StatVitality": "25",
+        "Damage": "25",
+        "Armor": "25"
+    },
+    {
+        "Name": "Wraith",
+        "MaxHealth": "175",
+        "StatStrength": "26",
+        "StatVitality": "26",
+        "Damage": "26",
+        "Armor": "26"
+    },
+    {
+        "Name": "Lich",
+        "MaxHealth": "180",
+        "StatStrength": "27",
+        "StatVitality": "27",
+        "Damage": "27",
+        "Armor": "27"
+    }
+]

@@ -1,0 +1,42 @@
+[
+    {
+        "Name": "Kobold Alpha",
+        "MaxHealth": "175",
+        "StatStrength": "25",
+        "StatVitality": "25",
+        "Damage": "25",
+        "Armor": "25"
+    },
+    {
+        "Name": "Ogre",
+        "MaxHealth": "185",
+        "StatStrength": "28",
+        "StatVitality": "28",
+        "Damage": "28",
+        "Armor": "28"
+    },
+    {
+        "Name": "Orc",
+        "MaxHealth": "190",
+        "StatStrength": "29",
+        "StatVitality": "29",
+        "Damage": "29",
+        "Armor": "29"
+    },
+    {
+        "Name": "Hobgoblin",
+        "MaxHealth": "195",
+        "StatStrength": "30",
+        "StatVitality": "30",
+        "Damage": "30",
+        "Armor": "30"
+    },
+    {
+        "Name": "Grizzly",
+        "MaxHealth": "200",
+        "StatStrength": "31",
+        "StatVitality": "31",
+        "Damage": "31",
+        "Armor": "31"
+    }
+]

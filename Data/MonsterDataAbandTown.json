@@ -1,0 +1,42 @@
+[
+    {
+        "Name": "Thief",
+        "MaxHealth": "150",
+        "StatStrength": "21",
+        "StatVitality": "21",
+        "Damage": "21",
+        "Armor": "21"
+    },
+    {
+        "Name": "Giant Rat",
+        "MaxHealth": "155",
+        "StatStrength": "22",
+        "StatVitality": "22",
+        "Damage": "22",
+        "Armor": "22"
+    },
+    {
+        "Name": "Goblin Alpha",
+        "MaxHealth": "155",
+        "StatStrength": "24",
+        "StatVitality": "24",
+        "Damage": "24",
+        "Armor": "24"
+    },
+    {
+        "Name": "Kobold",
+        "MaxHealth": "160",
+        "StatStrength": "23",
+        "StatVitality": "23",
+        "Damage": "23",
+        "Armor": "23"
+    },
+    {
+        "Name": "Bandit",
+        "MaxHealth": "165",
+        "StatStrength": "25",
+        "StatVitality": "25",
+        "Damage": "25",
+        "Armor": "25"
+    }
+]

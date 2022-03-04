@@ -1,0 +1,42 @@
+[
+    {
+        "Name": "Treant",
+        "MaxHealth": "130",
+        "StatStrength": "17",
+        "StatVitality": "17",
+        "Damage": "17",
+        "Armor": "17"
+    },
+    {
+        "Name": "Wood Elf",
+        "MaxHealth": "135",
+        "StatStrength": "18",
+        "StatVitality": "18",
+        "Damage": "18",
+        "Armor": "18"
+    },
+    {
+        "Name": "Black Bear",
+        "MaxHealth": "140",
+        "StatStrength": "19",
+        "StatVitality": "19",
+        "Damage": "19",
+        "Armor": "19"
+    },
+    {
+        "Name": "Giant Boar",
+        "MaxHealth": "145",
+        "StatStrength": "20",
+        "StatVitality": "20",
+        "Damage": "20",
+        "Armor": "20"
+    },
+    {
+        "Name": "Goblin Alpha",
+        "MaxHealth": "150",
+        "StatStrength": "21",
+        "StatVitality": "21",
+        "Damage": "21",
+        "Armor": "21"
+    }
+]

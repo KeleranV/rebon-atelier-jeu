@@ -1,0 +1,42 @@
+[
+    {
+        "Name": "Crab",
+        "MaxHealth": "90",
+        "StatStrength": "9",
+        "StatVitality": "9",
+        "Damage": "9",
+        "Armor": "9"
+    },
+    {
+        "Name": "Starfish",
+        "MaxHealth": "95",
+        "StatStrength": "10",
+        "StatVitality": "10",
+        "Damage": "10",
+        "Armor": "10"
+    },
+    {
+        "Name": "Lobster",
+        "MaxHealth": "100",
+        "StatStrength": "11",
+        "StatVitality": "11",
+        "Damage": "11",
+        "Armor": "11"
+    },
+    {
+        "Name": "Seal",
+        "MaxHealth": "105",
+        "StatStrength": "12",
+        "StatVitality": "12",
+        "Damage": "12",
+        "Armor": "12"
+    },
+    {
+        "Name": "Octopus",
+        "MaxHealth": "110",
+        "StatStrength": "13",
+        "StatVitality": "13",
+        "Damage": "13",
+        "Armor": "13"
+    }
+]

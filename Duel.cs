@@ -1,47 +1,23 @@
 ﻿namespace Jeu_1
 {
     public class Duel
-    {
-
+    {   //Variables
         private Player _player;
         private Monster _monster;
-
         private int _nbTours = 0;
         private int _nbDeVieARegenerer;
         private int _playerDamageToMonster = 0;
         private int _monsterDamageToPlayer = 0;
 
+        //Getters / Setters
+        public Player Player { get { return _player; } }
+        public Monster Monster { get { return _monster; } }
+        public int NbTours { get { return _nbTours; } }
+        public int NbDeVieARegenerer { get { return _nbDeVieARegenerer; } }
+        public int PlayerDamageToMonster { get { return _playerDamageToMonster; } }
+        public int MonsterDamageToPlayer { get { return _monsterDamageToPlayer; } }
 
-        public Player Player
-        {
-            get { return _player; }
-        }
-
-        public Monster Monster
-        {
-            get { return _monster; }
-        }
-
-        public int NbTours
-        {
-            get { return _nbTours; }
-        }
-
-        public int NbDeVieARegenerer
-        {
-            get { return _nbDeVieARegenerer; }
-        }
-        public int PlayerDamageToMonster
-        {
-            get { return _playerDamageToMonster; }
-        }
-
-        public int MonsterDamageToPlayer
-        {
-            get { return _monsterDamageToPlayer; }
-        }
-
-
+        //Constructor
         public Duel(Player player, Monster monster, int NbDeVieARegenerer)
         {
             _player = player;
@@ -51,23 +27,9 @@
             _nbDeVieARegenerer = NbDeVieARegenerer;
         }
 
+        //Methods
         public void AfficherStatistiques()
         {
-            /*string nbTours = String.Format("{0,-50}", $"Nombre de tours : {NbTours}");
-            string playerDamageToMonster = String.Format("{0,-50}", $"Dommages totaux causés au monstre : {PlayerDamageToMonster}");
-            string monsterDamageToPlayer = String.Format("{0,-50}", $"Dommages totaux causés au joueur : {MonsterDamageToPlayer}");
-            string regenVie = String.Format("{0,-50}", $"Nombre de vie a regenerer : {NbDeVieARegenerer}");
-            string espace = String.Format("{0,-50}", "");
-            string smallspace = String.Format("{0,10}", "");
-
-            Console.WriteLine($"{nbTours} Genre: {_player.Genre}\n" +
-                $"{playerDamageToMonster} Niveau joueur: {_player.Lvl}\n" +
-                $"{monsterDamageToPlayer} Experience: {_player.Exp}\n" +
-                $"{regenVie} Armor: {_player.Armor}\n" +
-                $"{espace} Strength: {_player.StatStrength}\n" +
-                $"{espace} Vitality: {_player.StatVitality}\n" +
-                $"{espace} Magic: {_player.StatMagic}       \n");*/
-
             Console.WriteLine("----------------------------------------------------------------------------------");
             Console.WriteLine(String.Format("{0,-40} | {1,-20} | {2,5}", $"Nombre de tours : {NbTours}", $"Nom: { _player.Name}", ""));
             Console.WriteLine(String.Format("{0,-40} | {1,-20} | {2,5}", $"Dommages totaux causés au monstre : {PlayerDamageToMonster}", $"Genre: { _player.Genre}", ""));
@@ -79,9 +41,6 @@
             Console.WriteLine(String.Format("{0,-40} | {1,-20} | {2,5}", "", $"Armor: { _player.Armor}", $"Armor: {_monster.Armor}"));
             Console.WriteLine("----------------------------------------------------------------------------------");
         }
-
-
-
         public void LancerCombat()
         {
 
@@ -125,7 +84,6 @@
             if (action == 1)
                 _monsterDamageToPlayer += _monster.Damage;
         }
-
         private void RegenererVieJoueur()
         {
             _player.Health += NbDeVieARegenerer;

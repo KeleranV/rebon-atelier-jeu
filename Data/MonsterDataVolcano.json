@@ -1,0 +1,42 @@
+[
+    {
+        "Name": "Dragon Whelp",
+        "MaxHealth": "225",
+        "StatStrength": "36",
+        "StatVitality": "36",
+        "Damage": "36",
+        "Armor": "36"
+    },
+    {
+        "Name": "Fire Bat",
+        "MaxHealth": "230",
+        "StatStrength": "37",
+        "StatVitality": "37",
+        "Damage": "37",
+        "Armor": "37"
+    },
+    {
+        "Name": "Fire Elemental",
+        "MaxHealth": "235",
+        "StatStrength": "38",
+        "StatVitality": "38",
+        "Damage": "38",
+        "Armor": "38"
+    },
+    {
+        "Name": "Magma Slime",
+        "MaxHealth": "240",
+        "StatStrength": "39",
+        "StatVitality": "39",
+        "Damage": "39",
+        "Armor": "39"
+    },
+    {
+        "Name": "Dragon",
+        "MaxHealth": "245",
+        "StatStrength": "40",
+        "StatVitality": "40",
+        "Damage": "40",
+        "Armor": "40"
+    }
+]
