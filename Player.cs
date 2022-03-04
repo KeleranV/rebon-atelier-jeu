@@ -76,7 +76,7 @@ public Player(string name, int maxHealth, int weaponDamage) : base(name, maxHeal
             while (!isFormatOK)
             {
                 Console.WriteLine("Sélectionnez 1 pour attaquer ou 2 pour se soigner!");
-                Console.Write("Tapez votre choix : ");
+                Console.Write("Tapez votre choix :  ");
                 try
                 {
                     choice = int.Parse(Console.ReadLine());
