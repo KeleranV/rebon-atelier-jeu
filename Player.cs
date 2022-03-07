@@ -59,11 +59,11 @@
             int choice = 0;
             while (!isFormatOK)
             {
-                Console.WriteLine("1 : attaquer, 2 : se soigner");
+                Console.WriteLine("1 : attaquer, 2 : se soigner, 3 : Fuir.");
                 try
                 {
                     choice = int.Parse(Console.ReadLine());
-                    if (choice == 1 || choice == 2)
+                    if (choice == 1 || choice == 2 || choice == 3)
                     {
                         isFormatOK = true;
                     }
@@ -88,6 +88,10 @@
                     break;
                 case 2:
                     Heal();
+                    break;
+
+                case 3:
+                    Town.Menu();
                     break;
             }
         }

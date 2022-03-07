@@ -8,7 +8,6 @@ namespace Jeu_1
 {
     internal class ZoneMenu
     {
-
         //Methods
         public static Zone Menu()
         {

@@ -24,7 +24,7 @@ namespace Jeu_1
         public static List<Zone> GetZoneData()
         {
             string CurrentDirectory = Environment.CurrentDirectory;
-            string path = @"/ZoneData.json";
+            string path = @"/Data/ZoneData.json";
             string fullPath = CurrentDirectory + path;
             StreamReader r = new StreamReader(fullPath);
             string jsonString = r.ReadToEnd();

@@ -70,7 +70,6 @@
         public abstract void Attack();
         protected void Attack(int damage)
         {
-            Console.WriteLine($"{this.Name} attaque ! {this.Enemy.Name} reçoit 10 dégats");
             this._enemy.Health -= damage - this._enemy._armor;
         }
         public abstract void Heal();

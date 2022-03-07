@@ -8,6 +8,64 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Data\MonsterData.json" />
+    <None Remove="Data\MonsterDataAbandTown.json" />
+    <None Remove="Data\MonsterDataBeach.json" />
+    <None Remove="Data\MonsterDataCrypt.json" />
+    <None Remove="Data\MonsterDataDarkForest.json" />
+    <None Remove="Data\MonsterDataForest.json" />
+    <None Remove="Data\MonsterDataGrotto.json" />
+    <None Remove="Data\MonsterDataHell.json" />
+    <None Remove="Data\MonsterDataMountains.json" />
+    <None Remove="Data\MonsterDataPlains.json" />
+    <None Remove="Data\MonsterDataSwamp.json" />
+    <None Remove="Data\MonsterDataVolcano.json" />
+    <None Remove="Data\ZoneData.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Data\MonsterData.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\MonsterDataAbandTown.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\MonsterDataBeach.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\MonsterDataCrypt.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\MonsterDataDarkForest.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\MonsterDataForest.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\MonsterDataGrotto.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\MonsterDataHell.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\MonsterDataMountains.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\MonsterDataPlains.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\MonsterDataSwamp.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\MonsterDataVolcano.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\ZoneData.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 

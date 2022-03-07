@@ -20,15 +20,15 @@
         }
         public static void InitializeCombat()
         {
-            int vieARegenerer = player.MaxHealth / 4;
-            Duel duel1 = new Duel(player, monster, vieARegenerer);
-            while (player.Health > 0)
+            int vieARegenerer = Program.player.MaxHealth / 4;
+            Duel duel1 = new Duel(Program.player, Program.monster, vieARegenerer);
+            while (Program.player.Health > 0)
             {
                 duel1.LancerCombat();
-                if (monster.Health == 0)
+                if (Program.monster.Health == 0)
                 {
-                    monster = Monster.GenerateMonster(Monster.RandomizeMonster(zone.Name),monsterList);
-                    duel1 = new Duel(player, monster, vieARegenerer);
+                    Program.monster = Monster.GenerateMonster(Monster.RandomizeMonster(Program.zone.Name),Program.monsterList);
+                    duel1 = new Duel(Program.player, Program.monster, vieARegenerer);
                 }
             }
         }
@@ -38,9 +38,11 @@
         {
             CreationPLayer();
             zoneList = Zone.GetZoneData();
-            zone = ZoneMenu.Menu();
-            monsterList = Monster.GetMonsterData();
+            Town.Menu();
+            //zone = ZoneMenu.Menu();
+            //monsterList = Monster.GetMonsterData();
             monster = Monster.GenerateMonster(Monster.RandomizeMonster(zone.Name),monsterList);
+
             InitializeCombat();
             Console.WriteLine("Game Over");
         }
