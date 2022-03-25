@@ -42,19 +42,17 @@ namespace Jeu_1
             switch (input)
             {
                 case 1:
-                    Program.zone = ZoneMenu.Menu();
-                    
+                    Program.zone = ZoneMenu.Menu(); //Placeholder
                     break;
                 case 2:
-                    Program.zone = ZoneMenu.Menu();
+                    Program.zone = ZoneMenu.Menu();//Placeholder
                     break;
                 case 3:
-                    Program.zone = ZoneMenu.Menu();
+                    Program.zone = ZoneMenu.Menu();//Placeholder
                     break;
                 case 4:
                     Program.zone = ZoneMenu.Menu();
                     Program.monsterList = Monster.GetMonsterData();
-                    //
                     //Program.InitializeCombat();
                     break;
             }
